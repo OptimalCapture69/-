@@ -1,0 +1,68 @@
+build 1.0.8 :
+- Added: system functions for semaphores management (blocking counters);
+- Added: ignoring of exceptions thrown by the functions that are executed without waiting;
+- Fixed: sometimes resulted in statistics loss when a robot performed a user-defined function;
+- Fixed: unblocking of the statistics database by the interpreter at the moment of sending requests to the robot selection modules;
+- Fixed: logical (and/or) operations priority;
+- Fixed: delayed variable initialization;
+- Removed: robot selection by priority if the robot's selection module couldn’t make selection;
+- Removed: support of robot selection for robot modules with API versions 000 and 100.
+
+build 1.0.7 :
+- The function of recording the robots??™ statistics, and the mechanism of accumulating the experience of using robots have been added;
+- A new type of modules has been added - the robots selection modules make it possible to enter one??™s own algorithms of distributing tasks between the robots;
+- The mechanism of localizing the system messages has been added. Russian localization has been added;
+- New RCML system functions have been added for the interlocking mechanism, which makes it possible to monitor the functions performed by the robots in parallel;
+- Multi-line comments have been added;
+- Several bugs that had caused memory leaks have been fixed;
+- The critical errors in the compiler that caused failure in case of a particular set of instructions have been fixed;
+- The critical bug that caused a failure when a robot finished the last instruction in the set has been fixed.
+
+build 1.0.6 :
+- Some optimizations for PCode;
+- Added the deletion of dead RCML code & non-reached RCML code;
+- Fixed syntax bugs with robot's vars: 
+    For robot functions: use of robot's vars is prohibited;
+    For user functions: use of robot's vars is prohibited in expressions; 
+- Fix bug with use the continue operator outside the loop;
+- Fix bug with try & catch into loop;
+- Rename UID to IID keyword (Interface identifier);
+- Added more deep optimizations for PCode (work time of compiler few increased);
+- Fix bug for the inadmissible indexes of commands of modules;
+- Added feature for throw & catch exception value;
+- Added PCode backward compatibility;
+- Added feature for the communicate RCML programs with OS through RCML interpreter:
+  - Pass the command line params to params into main function;
+  - Pass return value of main function to OS as exit code;
+  - Pass exception to OS as exit code 1;
+- Updated syntax map.
+
+build 1.0.5 :
+- Added detailed output of erros;
+- Fixed bugs with invalid characters into lexical analysis;
+- Fixed bug with pre parser error outputs;
+- Fixed bug with old version of bison;
+- Updated used version of Bison tool from 2.4.5 to 3.0.4;
+- Fixed bug when module produce error for start program;
+- Added suppport for api's versions of modules (multiversions of api);
+- Fixed bug for the search lib paths;
+- Fixed initiliazed bug with system function - input;
+- Added support for RCML-Repository system (only for freeware modules).
+
+build 1.0.4 :
+- Packages of commands added;
+- Wait flags feature added for user functions;
+- Improve synchronizations of robots.
+
+build 1.0.3:
+- Integration with repository added;
+- Critical bugfixes;
+- New api for modules;
+- Modules of RCML added to CI system.
+
+build 1.0.2:
+- Added the ability to create dynamic libraries of RCML;
+- Changed syntax of the function call from the module.
+
+build 1.0.1: 
+Initial 
