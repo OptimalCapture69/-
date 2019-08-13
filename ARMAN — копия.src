@@ -1,0 +1,15 @@
+DEF arman( )
+INI
+PTP {x 400, y 0, z 220, A 0, B 0, C 0}
+
+while TRUE
+
+OUT 1 'gripper_open' State=FALSE
+wait sec 1
+OUT 2 'gripper_close' State=TRUE
+wait sec 1
+
+OUT 2 'gripper_close' State=FALSE
+wait sec 1
+ENDWHILE
+END
